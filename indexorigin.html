@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo-2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row row-1 border-bottom">
+            <div class="brand-name flex-center border-right">
+                <div class="header">
+                    <h1>Open Night</h1>
+                </div>
+            </div>
+
+            <div class="brand-contact flex-center">
+                <div class="contact-container">
+                    <p>Saturday</p>
+                    <p>22:00</p>
+                    <p>Zona Industrial Gandra, lote 3</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-2 border-bottom">
+
+            <div class="hero-copy border-right">
+
+                <div class="i-row i-row1">
+
+                    <div class="col-projects">
+
+                        <div class="project-list">
+                            <p>Iraki</p>
+                            <p>Bresha</p>
+                            <p>Akari</p>
+                            <p>Arrow</p>
+                        </div>
+
+                        <div class="h-stripe">
+                            <span>303HR</span>
+                        </div>
+
+                    </div>
+
+                    <div class="col circle-text flex-center">
+
+                        <div class="text">
+
+                            <svg viewBox="0 0 100 100" width="110" height="110">
+
+                                <defs>
+                                    <path id="circle" d="M 50, 50 
+                                    m -37, 0
+                                    a 37, 37 0 1,1 74,0
+                                    a 37, 37 0 1,1 -74,0
+                                ">
+                                </defs>
+
+                                <text font-size="13">
+                                    <textPath xLink:href="#circle">
+                                        loading loading loading loading loading loading loading
+                                    </textPath>
+                                </text>
+
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="i-row i-row2">
+
+                    <div class="col lets-talk flex-center">
+                        <p>Novos horizontes em <span>webdesign</span></p>
+                    </div>
+
+                    <div class="col-stripe">
+                        <div class="line"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-img">
+                <div class="img-container border-right">
+
+                    <div class="box"></div>
+
+                    <div>
+                        <img src="imagens/imagem-1.jpg" class="img">
+                    </div>
+
+                </div>
+
+                <div class="empty-row">
+                    <div class="white-space border-bottom"></div>
+                    <div class="white-space"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <div class="marquee">
+        <span>
+            &nbsp; discuss your ideas &nbsp; / &nbsp; unexpected time &nbsp; / &nbsp;
+            spacial experiences &nbsp; / &nbsp; best specialists &nbsp; / &nbsp; impulse &nbsp; / &nbsp;
+            independent online store &nbsp; / &nbsp; you can't download the experience &nbsp;
+        </span>
+    </div> -->
+
+</body>
+
+
+<script>
+    gsap.to(".row-1, .row-2", 1, {
+        top: 0,
+        ease: "power4.out",
+        delay: 1,
+        stagger: {
+            amount: 0.5,
+        },
+    });
+
+    gsap.to(".brand-name", 1, {
+        left: 0,
+        ease: "power4.out",
+        delay: 2.5,
+        stagger: {
+            amount: 0.5,
+        },
+    });
+
+    gsap.from(".lets-talk p", 0.1, {
+        opacity: 0,
+        ease: "power4.out",
+        delay: 2,
+    });
+
+    gsap.to(".text", 2, {
+        scale: 0,
+        ease: "power4.out",
+        delay: 10,
+        stagger: {
+            amount: 0.5,
+        },
+    });
+
+    gsap.to(".text", 20, {
+        rotation: 360,
+        ease: Linear.easeNone,
+        repeat: -1,
+    });
+
+    gsap.to(".box", 1, {
+        top: "100%",
+        ease: "power4.out",
+        delay: 2,
+    });
+
+    gsap.to("h1, p", 1, {
+        top: 0,
+        ease: "power4.out",
+        delay: 2,
+        stagger: {
+            amount: 0.5,
+        },
+    });
+
+    gsap.from(".h-stripe", 1, {
+        top: "300%",
+        ease: "power4.out",
+        delay: 4,
+    });
+
+    gsap.from(".line", 1, {
+        scaleX: 0,
+        ease: "power4.out",
+        delay: 3.5,
+    });
+
+    gsap.from(".marquee", 1, {
+        bottom: "-10em",
+        ease: "power4.out",
+        delay: 3,
+    });
+</script>
+
+
+
+</html>
